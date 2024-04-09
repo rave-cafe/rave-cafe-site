@@ -1,0 +1,10 @@
+{
+  "name": "rave-cafe-site",
+  "version": "1.0.0",
+  "description": "cafe site",
+  "scripts": {
+    "build": "npx @11ty/eleventy"
+  },
+  "author": "rave cafe",
+  "license": "MIT"
+}
