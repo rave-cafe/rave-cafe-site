@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "cafe site",
   "scripts": {
-    "build": "npx @11ty/eleventy"
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
   },
   "author": "rave cafe",
   "license": "MIT"
