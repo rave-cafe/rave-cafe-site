@@ -6,11 +6,13 @@
     <title>rave cafe</title>
   </head>
   <body>
-    <img
-      width="42"
-      src="https://res.cloudinary.com/dy5musoby/image/upload/v1712687807/smile_ahsysw.svg"
-      alt="smile"
-    />
+    <a href="/">
+      <img
+        width="42"
+        src="https://res.cloudinary.com/dy5musoby/image/upload/v1712687807/smile_ahsysw.svg"
+        alt="smile"
+      />
+    </a>
     <h1>rave café</h1>
     <p>
       rave cafe is a community-driven creative project guided by the principles
@@ -19,7 +21,9 @@
     </p>
     <section>
       <h3>upcoming</h3>
-      <a href="/bx420">BX 420</a>
+      {% for post in collections.post %}
+      <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+      {% endfor %}
     </section>
   </body>
 </html>
