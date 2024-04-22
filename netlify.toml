@@ -6,6 +6,7 @@
   from = "/menu/002"
   to = "https://rave-cafe-site-v1.netlify.app/menu/002/"
 
+[[redirects]]
   from = "/menu/001"
   to = "https://rave-cafe-site-v1.netlify.app/menu/001/"
 
