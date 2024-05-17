@@ -10,4 +10,6 @@
   from = "/menu/001"
   to = "https://rave-cafe-site-v1.netlify.app/menu/001/"
 
-      
+[[redirects]]
+  from = "/qr/homeserver"
+  to = "/homeserver"
