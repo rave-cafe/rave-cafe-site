@@ -1,5 +1,8 @@
-Homeserver Resources
-====================
+---
+title: "Homeserver Resources"
+---
+
+<img  src="https://res.cloudinary.com/dvbwwes8n/image/upload/v1715951848/hand_n4mywf.png" alt="flyer" style="max-width:250px;width:100%;" />
 
 Getting Started
 ---------------
@@ -35,7 +38,7 @@ Hardware Mentioned in the Article
 ---------------------------------
 - [used Dell OptiPlex 3050](https://www.ebay.com/sch/i.html?_nkw=dell+optiplex+3050) on eBay
 - [Refurbished Seagate Exos 8TB](https://www.amazon.com/Seagate-Exos-Internal-Hard-Drive/dp/B086W38F5Z/) on Amazon
-- [Intel I350](https://www.amazon.com/Ethernet-Network-Adapter-Express-I340-T4/dp/B074PPRQQK) on Amazon)
+- [Intel I350](https://www.amazon.com/Ethernet-Network-Adapter-Express-I340-T4/dp/B074PPRQQK) on Amazon
 - [NanoPi](https://www.friendlyelec.com/)
 - [Orange Pi](http://www.orangepi.org/)
 - [Libre Computer](https://libre.computer/)
