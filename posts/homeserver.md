@@ -41,5 +41,3 @@ Hardware Mentioned in the Article
 - [Libre Computer](https://libre.computer/)
 - [Banana Pi](https://www.banana-pi.org/)
 - [pine64](https://pine64.org/)
-
-
