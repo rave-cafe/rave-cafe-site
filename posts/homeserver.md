@@ -1,5 +1,6 @@
 ---
 title: "Homeserver Resources"
+date: 2024-05-20
 ---
 
 <img  src="https://res.cloudinary.com/dvbwwes8n/image/upload/v1715951848/hand_n4mywf.png" alt="flyer" style="max-width:250px;width:100%;" />

@@ -1,5 +1,6 @@
 ---
 title: "menu 003"
+date: 2024-05-30
 ---
 
 <img src="https://res.cloudinary.com/dy5musoby/image/upload/v1717988711/hsnjt1f7laqsd5dy7c7g.jpg" alt="menu 003 cover" width="300" />
