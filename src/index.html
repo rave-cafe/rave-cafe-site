@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rave cafe</title>
+    <link rel="stylesheet" href="/assets/index.css" />
+  </head>
+  <body>
+    <a href="/">
+      <img
+        width="42"
+        src="https://res.cloudinary.com/dy5musoby/image/upload/v1712687807/smile_ahsysw.svg"
+        alt="smile"
+      />
+    </a>
+    <h1 class="text-4xl my-4 font-bold">rave cafe is not for sale</h1>
+    <p>
+      rave cafe is a community-driven creative project guided by the principles
+      of creative action, communal effort, & gifting. together we've made a chat
+      room, events, clothing, and zines. 
+    </p>
+    <p>
+      sign up for our <a href="/email">email list</a> to stay in touch and check
+      out our
+      <a
+        class="my-2 underline"
+        href="https://soundcloud.com/ravecafe"
+        target="_blank"
+        rel="noreferrer"
+        >music archive</a
+      >.
+    </p>
+    <section>
+      <h3 class="text-3xl font-bold my-4">pages</h3>
+      {% for post in collections.post reversed %}
+      <a class="my-2 block" href="{{ post.url }}"> {{ post.data.title }} </a>
+      {% endfor %}
+    </section>
+    <section class="disclaimer border-2 border-black p-2 mt-4">
+      <h3 class="font-bold">DISCLAIMER</h3>
+      <p>
+        The information provided on this website is for educational purposes
+        only. This site is intended as a self-help tool for your own use, and
+        should not be considered or used as a substitute for medical advice,
+        diagnosis, or treatment. Usage of the health-related information
+        contained within these html files is purely for the enhancement of the
+        vibes.
+      </p>
+    </section>
+  </body>
+</html>
