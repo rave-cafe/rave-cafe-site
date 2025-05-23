@@ -5,7 +5,7 @@ date: 2025-05-04
 
 ![Rave Cafe Menu 004 Cover](https://res.cloudinary.com/dy5musoby/image/upload/v1747958210/000326580004_phvxwl.jpg)
 
-<div style="margin: 30px 0;">
+<div class="my-4">
 
 Thank you for scanning the QR code on the back.
 
