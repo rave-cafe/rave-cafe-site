@@ -3,7 +3,7 @@ title: "menu 004"
 date: 2025-05-04
 ---
 
-![Rave Cafe Menu 004 Cover](https://res.cloudinary.com/dy5musoby/image/upload/v1747958210/000326580004_phvxwl.jpg)
+[![Rave Cafe Menu 004 Cover](https://res.cloudinary.com/dy5musoby/image/upload/v1747958210/000326580004_phvxwl.jpg)](https://daltonsaffe.com)
 
 <div class="my-4">
 
