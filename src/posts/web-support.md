@@ -105,6 +105,41 @@ git clone YOUR-URL-HERE                 # paste the URL you copied
 cd my-first-website                     # move into the folder
 ```
 
+### setting up live server in vs code
+
+Before you start building your website, install the Live Server extension in VS Code. This will let you see your changes instantly in the browser as you code!
+
+**Step 1: Install the Live Server extension**
+
+1. Open VS Code
+2. Click the Extensions icon in the left sidebar (or press `Cmd+Shift+X` on Mac, `Ctrl+Shift+X` on Windows)
+3. Type "Live Server" in the search box
+4. Look for "Live Server" by Ritwick Dey (it has millions of downloads)
+5. Click the blue "Install" button
+
+**Step 2: Use Live Server**
+
+Once installed, there are two ways to start it:
+
+**Option 1:** Right-click on your `index.html` file and select "Open with Live Server"
+
+**Option 2:** Click the "Go Live" button in the bottom-right corner of VS Code
+
+**What happens:**
+- Your browser will open automatically
+- You'll see your website at something like `http://127.0.0.1:5500`
+- Every time you save a file, the browser refreshes automatically - no need to manually reload!
+
+**To stop Live Server:**
+- Click "Port: 5500" in the bottom-right corner, or
+- Close the browser tab
+
+**Why this is awesome:**
+- See changes instantly as you type
+- No need to keep refreshing your browser
+- Works with HTML, CSS, and JavaScript changes
+- Makes learning much faster and more fun!
+
 ### your first html file
 
 HTML is the language that structures web pages. Start with this basic template:
@@ -130,6 +165,102 @@ HTML is the language that structures web pages. Start with this basic template:
 ```
 
 You can also use this [HTML template on GitHub](https://github.com/mdn/beginner-html-site-styled) from Mozilla as a starting point.
+
+### your first css file
+
+CSS (Cascading Style Sheets) is what makes your website look good. It controls colors, fonts, spacing, layouts, and more.
+
+**Create a file called `style.css` in the same folder as your `index.html`:**
+
+```css
+/* This is a comment in CSS */
+
+/* Style the entire page */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Style headings */
+h1 {
+  color: #333;
+  font-size: 36px;
+}
+
+/* Style paragraphs */
+p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 18px;
+}
+```
+
+**How CSS works:**
+
+CSS uses **selectors** to target HTML elements and apply **styles** to them:
+
+```css
+selector {
+  property: value;
+}
+```
+
+**Common CSS properties:**
+
+- `color` - text color
+- `background-color` - background color
+- `font-size` - size of text
+- `font-family` - which font to use
+- `margin` - space outside an element
+- `padding` - space inside an element
+- `border` - border around an element
+- `width` / `height` - size of an element
+
+**Example: Styling a button**
+
+In your HTML:
+```html
+<button class="my-button">Click me!</button>
+```
+
+In your CSS:
+```css
+.my-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.my-button:hover {
+  background-color: #45a049;
+}
+```
+
+**The three ways to add CSS:**
+
+1. **External stylesheet** (recommended) - like we did above with `style.css`
+2. **Internal styles** - in the `<head>` section:
+   ```html
+   <style>
+     h1 { color: blue; }
+   </style>
+   ```
+3. **Inline styles** - directly on elements (not recommended):
+   ```html
+   <h1 style="color: blue;">Hello</h1>
+   ```
+
+**Tips:**
+- Use classes (`.classname`) for reusable styles
+- Use IDs (`#idname`) for unique elements
+- Colors can be written as names (`red`), hex codes (`#ff0000`), or RGB (`rgb(255, 0, 0)`)
+- Test your changes by opening `index.html` in a browser
 
 ### learning resources
 
