@@ -64,7 +64,7 @@ code .                 # open it in VS Code
 
 ### setting up github
 
-GitHub is a website that stores your code online and tracks changes. Think of it as a combination of Dropbox and a time machine for your code.
+GitHub is a website that stores your code online and tracks changes. Git is a tool that you use to track your changes as you work on code and Github is a website where you can push up those changes to be hosted so you can collaborate with others or host your code.
 
 **Step 1: Create a GitHub account**
 
