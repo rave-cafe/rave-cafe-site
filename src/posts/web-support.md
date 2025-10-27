@@ -9,15 +9,9 @@ Web support is about making a simple web site to break out of being locked into 
 
 The web as we know it today was designed to share science papers between universities. In 1989 Sir Tim Berners Lee developed HTML - hypertext markup language - which is what the letters you're reading right now are encoded in and HTTP - hypertext transfer protocol - which is how the HTML got to your computer. He also developed the URL - uniform resource locater - which routes the HTML to the right place using words you can remember like [rave.cafe](http://rave.cafe). URLs were built on top of a US DoD technology from the 70's called TCP/IP - transfer control protocol / internet protocol - which was designed to reliably transfer packages of information over computer networks to your IP address.
 
-We'll be building a website together over the course of three weeks.
-
 ## when?
 
-Mon, Oct 27 - 7pm - 8pm - Getting Started
-
-Mon, Nov 3 - 7pm - 8pm - HTML & CSS
-
-Mon, Nov 10 - 7pm - 8pm - Hosting & JavaScript
+Mon, Nov 3 - 7pm - 8pm - Getting Started with Github, HTML, CSS
 
 ## where?
 
@@ -126,15 +120,18 @@ Once installed, there are two ways to start it:
 **Option 2:** Click the "Go Live" button in the bottom-right corner of VS Code
 
 **What happens:**
+
 - Your browser will open automatically
 - You'll see your website at something like `http://127.0.0.1:5500`
 - Every time you save a file, the browser refreshes automatically - no need to manually reload!
 
 **To stop Live Server:**
+
 - Click "Port: 5500" in the bottom-right corner, or
 - Close the browser tab
 
 **Why this is awesome:**
+
 - See changes instantly as you type
 - No need to keep refreshing your browser
 - Works with HTML, CSS, and JavaScript changes
@@ -221,14 +218,16 @@ selector {
 **Example: Styling a button**
 
 In your HTML:
+
 ```html
 <button class="my-button">Click me!</button>
 ```
 
 In your CSS:
+
 ```css
 .my-button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 15px 30px;
   border: none;
@@ -248,7 +247,9 @@ In your CSS:
 2. **Internal styles** - in the `<head>` section:
    ```html
    <style>
-     h1 { color: blue; }
+     h1 {
+       color: blue;
+     }
    </style>
    ```
 3. **Inline styles** - directly on elements (not recommended):
@@ -257,6 +258,7 @@ In your CSS:
    ```
 
 **Tips:**
+
 - Use classes (`.classname`) for reusable styles
 - Use IDs (`#idname`) for unique elements
 - Colors can be written as names (`red`), hex codes (`#ff0000`), or RGB (`rgb(255, 0, 0)`)
