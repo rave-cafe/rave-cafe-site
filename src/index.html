@@ -5,46 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>rave cafe</title>
     <link rel="stylesheet" href="/assets/index.css" />
+    <style>
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .rotating-image {
+        animation: rotate 8s linear infinite;
+        opacity: 1;
+        transition: opacity 0.3s ease-in;
+      }
+
+      .fade-out {
+        opacity: 0;
+      }
+    </style>
   </head>
-  <body>
-    <a href="/">
+  <body class="m-0 p-0 bg-[#171717] flex justify-center items-center min-h-screen">
+    <a href="/tables" id="tableLink">
       <img
-        width="42"
-        src="https://res.cloudinary.com/dy5musoby/image/upload/v1712687807/smile_ahsysw.svg"
+        class="rotating-image cursor-pointer w-[300px] h-auto"
+        src="https://res.cloudinary.com/dy5musoby/image/upload/v1767067584/smile-nobg_ixjweh.png"
         alt="smile"
+        id="mainImage"
       />
     </a>
-    <h1 class="text-4xl my-4 font-bold">rave cafe</h1>
-    <p>
-      rave cafe is a community-driven creative project guided by the principles
-      of creative action, communal effort, & gifting. together we've made a chat
-      room, events, clothing, and zines. 
-    </p>
-    <a class="block my-4" href="/email"><h2>email</h2</a>
-    <a
-      class="my-2 underline"
-      href="https://soundcloud.com/ravecafe"
-      target="_blank"
-      rel="noreferrer"
-      >
-        <h2>music archive</h2>
-      </a>
-    <section>
-      <h3 class="text-3xl font-bold my-4">pages</h3>
-      {% for post in collections.post reversed %}
-      <a class="my-2 block" href="{{ post.url }}"> {{ post.data.title }} </a>
-      {% endfor %}
-    </section>
-    <section class="disclaimer border-2 border-black p-2 mt-4">
-      <h3 class="font-bold">DISCLAIMER</h3>
-      <p>
-        The information provided on this website is for educational purposes
-        only. This site is intended as a self-help tool for your own use, and
-        should not be considered or used as a substitute for medical advice,
-        diagnosis, or treatment. Usage of the health-related information
-        contained within these html files is purely for the enhancement of the
-        vibes.
-      </p>
-    </section>
+
+    <script>
+      document.getElementById('tableLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        const img = document.getElementById('mainImage');
+
+        img.classList.add('fade-out');
+
+        setTimeout(() => {
+          window.location.href = '/tables';
+        }, 300);
+      });
+    </script>
   </body>
 </html>

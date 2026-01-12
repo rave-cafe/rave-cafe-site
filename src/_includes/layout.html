@@ -3,18 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rave café</title>
+    <title>rave cafe</title>
     <link rel="stylesheet" href="/assets/index.css" />
+    <style>
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .rotating-header-image {
+        animation: rotate 8s linear infinite;
+      }
+
+      @keyframes zoomIn {
+        from {
+          transform: scale(1) rotate(var(--rotation));
+        }
+        to {
+          transform: scale(20) rotate(calc(var(--rotation) + 360deg));
+          opacity: 1;
+        }
+      }
+
+      .zoom-transition {
+        animation: zoomIn 0.8s ease-in forwards;
+      }
+    </style>
   </head>
-  <body>
-    <a href="/">
+  <body
+    class="max-w-[800px] leading-tight mx-auto my-2.5 p-7 bg-[#171717] text-white"
+  >
+    <a href="/" class="flex justify-center mb-4 mt-0" id="headerLink">
       <img
-        width="42"
-        src="https://res.cloudinary.com/dy5musoby/image/upload/v1712687807/smile_ahsysw.svg"
+        class="rotating-header-image w-[50px] h-auto opacity-30 cursor-pointer hover:opacity-50 transition-opacity"
+        src="https://res.cloudinary.com/dy5musoby/image/upload/v1767067584/smile-nobg_ixjweh.png"
         alt="smile"
+        id="headerImage"
       />
     </a>
-    <h1 class="my-4 font-bold text-2xl">{{title | default: "rave cafe"}}</h1>
+    <h1 class="my-4 font-bold text-2xl text-center">
+      {{title | default: "rave cafe"}}
+    </h1>
     <main>{{content}}</main>
+
+    <script>
+      document
+        .getElementById("headerLink")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const img = document.getElementById("headerImage");
+          const computedStyle = window.getComputedStyle(img);
+          const matrix = computedStyle.transform;
+
+          // Calculate current rotation
+          let rotation = 0;
+          if (matrix !== "none") {
+            const values = matrix.split("(")[1].split(")")[0].split(",");
+            const a = values[0];
+            const b = values[1];
+            rotation = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+          }
+
+          img.style.setProperty("--rotation", rotation + "deg");
+          img.classList.remove("rotating-header-image");
+          img.classList.add("zoom-transition");
+
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 800);
+        });
+    </script>
   </body>
 </html>

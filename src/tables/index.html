@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rave cafe</title>
+    <link rel="stylesheet" href="/assets/index.css" />
+    <style>
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .rotating-center-image {
+        animation: rotate 8s linear infinite;
+      }
+
+      @keyframes zoomIn {
+        from {
+          transform: scale(1) rotate(var(--rotation));
+        }
+        to {
+          transform: scale(20) rotate(calc(var(--rotation) + 360deg));
+          opacity: 1;
+        }
+      }
+
+      .zoom-transition {
+        animation: zoomIn 0.8s ease-in forwards;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .page-content {
+        animation: fadeIn 0.3s ease-in forwards;
+      }
+    </style>
+  </head>
+  <body
+    class="m-0 p-10 bg-[#171717] flex justify-center items-center min-h-screen flex-col gap-5 relative"
+  >
+    <div
+      class="flex flex-col items-center gap-16 max-w-[600px] relative page-content"
+    >
+      <div class="flex gap-10 justify-center items-start relative">
+        <a
+          href="https://soundcloud.com/ravecafe"
+          class="text-center no-underline mt-0 group"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img
+            class="w-[200px] h-auto block mx-auto mb-2"
+            src="https://res.cloudinary.com/dy5musoby/image/upload/v1767067115/rave-cafe-table-wh_jrvriw.png"
+            alt="table"
+          />
+          <h2
+            class="text-white text-2xl font-normal m-0 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-[600ms] ease-in-out"
+          >
+            music
+          </h2>
+        </a>
+
+        <a href="/email" class="text-center no-underline mt-12 group">
+          <img
+            class="w-[120px] h-auto block mx-auto mb-2"
+            src="https://res.cloudinary.com/dy5musoby/image/upload/v1767067115/rave-cafe-table-wh_jrvriw.png"
+            alt="table"
+          />
+          <h2
+            class="text-white text-xl font-normal m-0 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-[600ms] ease-in-out"
+          >
+            mail
+          </h2>
+        </a>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("centerLink")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          const img = document.getElementById("centerImage");
+          const computedStyle = window.getComputedStyle(img);
+          const matrix = computedStyle.transform;
+
+          // Calculate current rotation
+          let rotation = 0;
+          if (matrix !== "none") {
+            const values = matrix.split("(")[1].split(")")[0].split(",");
+            const a = values[0];
+            const b = values[1];
+            rotation = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+          }
+
+          img.style.setProperty("--rotation", rotation + "deg");
+          img.classList.remove("rotating-center-image");
+          img.classList.add("zoom-transition");
+
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 800);
+        });
+    </script>
+  </body>
+</html>
