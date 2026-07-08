@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "cafe site",
   "scripts": {
+    "postinstall": "npm rebuild @tailwindcss/oxide --update-binary || true",
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve"
   },
